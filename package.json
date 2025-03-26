@@ -64,6 +64,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-base-typescript": "^1.1.0",
     "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "release-it": "^18.1.2",
@@ -71,5 +72,8 @@
   },
   "peerDependencies": {
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13"
   }
 }

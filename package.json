@@ -2,10 +2,11 @@
   "name": "date-service",
   "description": "A flexible date management service based on the Strategy pattern. It allows configuring different implementations.",
   "version": "0.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup src/index.ts",
     "prepare": "husky",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
@@ -14,7 +15,6 @@
     "release": "release-it --"
   },
   "author": "Broditec <info@broditec.net> (https://broditec.net/)",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BroditecLabs/date-service.git"
@@ -64,12 +64,17 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-base-typescript": "^1.1.0",
     "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "release-it": "^18.1.2",
+    "tsup": "^8.4.0",
     "typescript-eslint": "^8.28.0"
   },
   "peerDependencies": {
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13"
   }
 }
